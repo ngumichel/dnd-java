@@ -4,7 +4,7 @@ public enum WeaponType {
     Spear(7),
     Sword(3),
     Greatsword(8),
-    Gun(6),
+    Hammer(6),
     Bow(4);
 
     private int wtPower;

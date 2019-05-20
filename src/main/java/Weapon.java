@@ -1,63 +1,44 @@
 public class Weapon {
 
-    private final WeaponAttribute attribute;
-    private final WeaponType type;
-    private static int WeaponPower;
+    private WeaponAttribute attribute;
+    private WeaponType type;
+    private int WeaponPower;
+
+    public Weapon() {
+
+    }
 
     public Weapon(WeaponAttribute wAttribute, WeaponType wType) {
         this.attribute = wAttribute;
         this.type = wType;
     }
 
-    public String description() {
-        return attribute + " " + type + " : Atk Power " + WeaponPower;
+    public WeaponAttribute getAttribute() {
+        return this.attribute;
     }
 
-    public static void main(String[] args) {
-        Weapon weapon = new Weapon(WeaponAttribute.random(), WeaponType.random());
+    public WeaponType getType() {
+        return this.type;
+    }
 
-        int aPower = 0;
-        int tPower = 0;
+    public int getWeaponPower() {
+        return this.WeaponPower;
+    }
 
-        switch (weapon.attribute) {
-            case Burning:
-                aPower = 3;
-                break;
-            case Frost:
-                aPower = 2;
-                break;
-            case Crystal:
-                aPower = 5;
-                break;
-            case Storm:
-                aPower = 7;
-                break;
-            case Ultimate:
-                aPower = 9;
-                break;
-        }
+    public void setAttribute(WeaponAttribute attribute) {
+        this.attribute = attribute;
+    }
 
-        switch (weapon.type) {
-            case Spear:
-                tPower = 7;
-                break;
-            case Sword:
-                tPower = 3;
-                break;
-            case Greatsword:
-                tPower = 8;
-                break;
-            case Gun:
-                tPower = 6;
-                break;
-            case Bow:
-                tPower = 4;
-                break;
-        }
+    public void setType(WeaponType type) {
+        this.type = type;
+    }
 
-        WeaponPower = aPower + tPower;
-        System.out.println(weapon.description());
+    public void setWeaponPower(int weaponPower) {
+        this.WeaponPower = weaponPower;
+    }
 
+    public String description() {
+        return attribute + " " + type + " (AP " + WeaponPower + ")";
     }
 
 }
