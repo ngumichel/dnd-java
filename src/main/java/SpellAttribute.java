@@ -1,20 +1,20 @@
 import java.util.Random;
 
 public enum SpellAttribute {
-    Fire ("Fire"),
-    Ice ("Ice"),
-    Lightning ("Lightning"),
-    Dark ("Dark"),
-    Ultimate ("Ultimate");
+    Fire(4),
+    Ice(3),
+    Lightning(5),
+    Dark(7),
+    Ultimate(9);
 
-    private String name = "";
+    private int saPower;
 
-    SpellAttribute(String name){
-        this.name = name;
+    SpellAttribute(int power) {
+        this.saPower = power;
     }
 
-    public String toString(){
-        return name;
+    public int getSaPower() {
+        return saPower;
     }
 
     public static SpellAttribute random() {

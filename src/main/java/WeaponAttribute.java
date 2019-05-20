@@ -1,20 +1,20 @@
 import java.util.Random;
 
 public enum WeaponAttribute {
-    Burning ("Burning"),
-    Frost ("Frost"),
-    Crystal ("Crystal"),
-    Storm ("Storm"),
-    Ultimate ("Ultimate");
+    Burning(3),
+    Frost(2),
+    Crystal(5),
+    Storm(7),
+    Ultimate(9);
 
-    private String name = "";
+    private int waPower;
 
-    WeaponAttribute(String name){
-        this.name = name;
+    WeaponAttribute(int power) {
+        this.waPower = power;
     }
 
-    public String toString(){
-        return name;
+    public int getWaPower() {
+        return waPower;
     }
 
     public static WeaponAttribute random() {

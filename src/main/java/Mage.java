@@ -1,4 +1,4 @@
-public class Mage {
+public class Mage extends Hero {
 
     int health;
     int magePow;

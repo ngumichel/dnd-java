@@ -1,4 +1,4 @@
-public class Warrior {
+public class Warrior extends Hero {
 
     int health;
     int warriorPow;

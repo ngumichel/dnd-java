@@ -1,20 +1,20 @@
 import java.util.Random;
 
 public enum SpellType {
-    Ball ("Ball"),
-    Lance ("Lance"),
-    Beam ("Beam"),
-    Meteor ("Meteor"),
-    Wall ("Wall");
+    Ball(3),
+    Beam(6),
+    Lance(5),
+    Meteor(8),
+    Wall(7);
 
-    private String name = "";
+    private int stPower;
 
-    SpellType(String name){
-        this.name = name;
+    SpellType(int power) {
+        this.stPower = power;
     }
 
-    public String toString(){
-        return name;
+    public int getStPower() {
+        return stPower;
     }
 
     public static SpellType random() {

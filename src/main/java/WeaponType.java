@@ -1,20 +1,20 @@
 import java.util.Random;
 
 public enum WeaponType {
-    Spear ("Spear"),
-    Sword ("Sword"),
-    Greatsword ("Greatsword"),
-    Gun ("Gun"),
-    Bow ("Bow");
+    Spear(7),
+    Sword(3),
+    Greatsword(8),
+    Gun(6),
+    Bow(4);
 
-    private String name = "";
+    private int wtPower;
 
-    WeaponType(String name){
-        this.name = name;
+    WeaponType(int power) {
+        this.wtPower = power;
     }
 
-    public String toString(){
-        return name;
+    public int getWtPower() {
+        return wtPower;
     }
 
     public static WeaponType random() {
