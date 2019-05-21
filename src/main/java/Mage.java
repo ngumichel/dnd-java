@@ -1,28 +1,28 @@
 public class Mage extends Hero {
 
     private Spell spell;
-    private String philtre;
+    private Philtre philtre;
 
     public Mage() {
     }
 
-    public Mage(String heroName, String heroImage, int heroHealth, int heroPower, String heroPhiltre, Spell spell) {
+    public Mage(String heroName, String heroImage, int heroHealth, int heroPower, Philtre heroPhiltre, Spell spell) {
         super(heroName, heroImage, heroHealth, heroPower);
         this.philtre = heroPhiltre;
         this.spell = spell;
     }
 
-    public Mage(String heroName, String heroImage, int heroHealth, int heroPower, String heroPhiltre) {
+    public Mage(String heroName, String heroImage, int heroHealth, int heroPower, Philtre heroPhiltre) {
         super(heroName, heroImage, heroHealth, heroPower);
         this.philtre = heroPhiltre;
-        this.spell = spell;
+        this.spell = new Spell();
     }
 
     public Spell getSpell() {
         return this.spell;
     }
 
-    public String getPhiltre() {
+    public Philtre getPhiltre() {
         return philtre;
     }
 
@@ -30,14 +30,14 @@ public class Mage extends Hero {
         this.spell = spell;
     }
 
-    public void setPhiltre(String philtre) {
+    public void setPhiltre(Philtre philtre) {
         this.philtre = philtre;
     }
 
     public String toString() {
         return super.toString() +
                 "Spell : " + spell.description() + "\n" +
-                "Philtre : " + philtre;
+                "Philtre : " + philtre.description() + " Philtre";
     }
 
 }

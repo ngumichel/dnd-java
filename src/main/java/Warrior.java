@@ -1,19 +1,19 @@
 public class Warrior extends Hero {
 
     private Weapon weapon;
-    private String shield;
+    private Shield shield;
 
     public Warrior() {
 
     }
 
-    public Warrior(String heroName, String heroImage, int heroHealth, int heroPower, String heroShield, Weapon weapon) {
+    public Warrior(String heroName, String heroImage, int heroHealth, int heroPower, Shield heroShield, Weapon weapon) {
         super(heroName, heroImage, heroHealth, heroPower);
         this.shield = heroShield;
         this.weapon = weapon;
     }
 
-    public Warrior(String heroName, String heroImage, int heroHealth, int heroPower, String heroShield) {
+    public Warrior(String heroName, String heroImage, int heroHealth, int heroPower, Shield heroShield) {
         super(heroName, heroImage, heroHealth, heroPower);
         this.shield = heroShield;
         this.weapon = new Weapon();
@@ -23,7 +23,7 @@ public class Warrior extends Hero {
         return this.weapon;
     }
 
-    public String getShield() {
+    public Shield getShield() {
         return this.shield;
     }
 
@@ -31,14 +31,14 @@ public class Warrior extends Hero {
         this.weapon = weapon;
     }
 
-    public void setShield(String shield) {
+    public void setShield(Shield shield) {
         this.shield = shield;
     }
 
     public String toString() {
         return super.toString() +
                 "Weapon : " + weapon.description() + "\n" +
-                "Shield : " + shield;
+                "Shield : " + shield.description() + " Shield";
     }
 
 }

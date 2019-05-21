@@ -27,6 +27,7 @@ public class Main {
             int heroPower = (int) (Math.random() * (10 - 5) + 5);
 
             Weapon weapon = new Weapon(WeaponAttribute.random(), WeaponType.random());
+            Shield shield = new Shield(ShieldRank.random());
 
             int aPower = 0;
             int tPower = 0;
@@ -70,7 +71,7 @@ public class Main {
             weaponPower = aPower + tPower;
             weapon.setWeaponPower(weaponPower);
 
-            Hero warrior = new Warrior(name, "image", heroHealth, heroPower, "Shield", weapon);
+            Hero warrior = new Warrior(name, "image", heroHealth, heroPower, shield, weapon);
             System.out.println(warrior.toString());
 
         } else if (path == 2) {
@@ -82,6 +83,7 @@ public class Main {
             int heroPower = (int) (Math.random() * (15 - 8) + 8);
 
             Spell spell = new Spell(SpellAttribute.random(), SpellType.random());
+            Philtre philtre = new Philtre(PhiltreRank.random());
 
             int sPower = 0;
             int spPower = 0;
@@ -125,7 +127,7 @@ public class Main {
             spellPower = sPower + spPower;
             spell.setSpellPower(spellPower);
 
-            Hero mage = new Mage(name, "image", heroHealth, heroPower, "Philtre", spell);
+            Hero mage = new Mage(name, "image", heroHealth, heroPower, philtre, spell);
             System.out.println(mage.toString());
         }
     }
