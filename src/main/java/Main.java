@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Hero> heroes = new ArrayList<Hero>();
+        Hero[] heroes = new Hero[10];
 
         boolean game = true;
         while (game) {
@@ -29,6 +29,8 @@ public class Main {
                 case 1:
                     System.out.println("You choose to create a new Hero!");
                     System.out.println();
+
+                    int index = 0;
 
                     boolean create = true;
                     while (create) {
@@ -99,7 +101,8 @@ public class Main {
                             weapon.setWeaponPower(weaponPower);
 
                             Hero warrior = new Warrior(name, "image", heroHealth, heroPower, shield, weapon);
-                            heroes.add(warrior);
+                            heroes[index] = warrior;
+                            index =+ 1;
                             System.out.println("Warrior " + warrior.toString());
                             System.out.println();
 
@@ -157,7 +160,8 @@ public class Main {
                             spell.setSpellPower(spellPower);
 
                             Hero mage = new Mage(name, "image", heroHealth, heroPower, philtre, spell);
-                            heroes.add(mage);
+                            heroes[index] = mage;
+                            index =+ 1;
                             System.out.println("Mage " + mage.toString());
                             System.out.println();
                         }
@@ -188,8 +192,8 @@ public class Main {
                     System.out.println("You choose to see your Heroes!");
                     System.out.println();
 
-                    for (int i = 0; i < heroes.size(); i++) {
-                        System.out.println(i + ". " + heroes.get(i));
+                    for (int i = 0; i < heroes.length; i++) {
+                        System.out.println(i + ". " + heroes[i].toString());
                         System.out.println();
                     }
                     break;
@@ -200,7 +204,7 @@ public class Main {
                     boolean edit = true;
                     while (edit) {
 
-                        if (heroes.size() == 0) {
+                        if (heroes.length == 0) {
                             System.out.println("You have no Heroes! Go make some~");
                             edit = false;
                         } else {
@@ -208,8 +212,8 @@ public class Main {
                             System.out.println("Select your Hero!");
                             System.out.println();
 
-                            for (int i = 0; i < heroes.size(); i++) {
-                                System.out.println(i + ". " + heroes.get(i));
+                            for (int i = 0; i < heroes.length; i++) {
+                                System.out.println(i + ". " + heroes[i]);
                                 System.out.println();
                             }
 
@@ -221,7 +225,7 @@ public class Main {
                             boolean editHero = true;
                             while (editHero) {
 
-                                System.out.println(heroes.get(selected));
+                                System.out.println(heroes[selected]);
                                 System.out.println();
 
                                 Scanner editChoice = new Scanner(System.in);
@@ -239,29 +243,15 @@ public class Main {
                                         Scanner newNameInput = new Scanner(System.in);
                                         System.out.println("Enter your new name : ");
                                         String newName = newNameInput.nextLine();
-                                        heroes.get(selected).setName(newName);
+                                        heroes[selected].setName(newName);
                                         System.out.println("Your new name is " + newName);
                                         System.out.println();
                                         break;
 
                                     case 2:
-                                        Class heroClass = heroes.get(selected).getClass();
-                                        if (heroClass == Warrior) {
-                                            Weapon weapon = new Weapon(WeaponAttribute.random(), WeaponType.random());
-                                            Shield shield = new Shield(ShieldRank.random());
-                                            ((Warrior) heroes.get(selected)).setWeapon(weapon);
-                                            ((Warrior) heroes.get(selected)).setShield(shield);
-                                        } else if (heroClass == Mage) {
-                                            Spell spell = new Spell(SpellAttribute.random(), SpellType.random());
-                                            Philtre philtre = new Philtre(PhiltreRank.random());
-                                            ((Mage) heroes.get(selected)).setSpell(spell);
-                                            ((Mage) heroes.get(selected)).setPhiltre(philtre);
-                                        }
                                         break;
 
                                     case 3:
-                                        editHero = false;
-                                        heroes.remove(selected);
                                         break;
 
                                     case 4:
