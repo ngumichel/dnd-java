@@ -16,8 +16,32 @@ public class Hero {
         this.power = heroPower;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
     public String toString() {
-        return "Here comes a new challenger : " + name + " !" + "\n" +
+        return name + "\n" +
                 "Health : " + health + "\n" +
                 "Power : " + power + "\n";
     }

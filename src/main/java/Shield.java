@@ -19,7 +19,7 @@ public class Shield {
     }
 
     public String description() {
-        return rank + "";
+        return rank.toString();
     }
 
 }

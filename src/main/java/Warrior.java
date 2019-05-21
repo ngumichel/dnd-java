@@ -13,9 +13,9 @@ public class Warrior extends Hero {
         this.weapon = weapon;
     }
 
-    public Warrior(String heroName, String heroImage, int heroHealth, int heroPower, Shield heroShield) {
+    public Warrior(String heroName, String heroImage, int heroHealth, int heroPower) {
         super(heroName, heroImage, heroHealth, heroPower);
-        this.shield = heroShield;
+        this.shield = new Shield();
         this.weapon = new Weapon();
     }
 
