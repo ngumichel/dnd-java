@@ -1,3 +1,8 @@
+package dnd.hero;
+
+import dnd.weapon.Weapon;
+import dnd.shield.Shield;
+
 public class Warrior extends Hero {
 
     private Weapon weapon;

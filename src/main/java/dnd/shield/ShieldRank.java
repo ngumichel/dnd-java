@@ -1,3 +1,5 @@
+package dnd.shield;
+
 import java.util.Random;
 
 public enum ShieldRank {

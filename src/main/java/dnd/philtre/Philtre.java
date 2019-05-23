@@ -1,3 +1,5 @@
+package dnd.philtre;
+
 public class Philtre {
 
     private PhiltreRank rank;

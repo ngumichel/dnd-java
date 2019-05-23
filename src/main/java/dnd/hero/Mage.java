@@ -1,3 +1,8 @@
+package dnd.hero;
+
+import dnd.spell.Spell;
+import dnd.philtre.Philtre;
+
 public class Mage extends Hero {
 
     private Spell spell;

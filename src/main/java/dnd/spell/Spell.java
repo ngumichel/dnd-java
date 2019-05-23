@@ -1,3 +1,5 @@
+package dnd.spell;
+
 public class Spell {
 
     private SpellAttribute attribute;

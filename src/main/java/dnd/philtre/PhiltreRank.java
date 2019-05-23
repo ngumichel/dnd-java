@@ -1,3 +1,5 @@
+package dnd.philtre;
+
 import java.util.Random;
 
 public enum PhiltreRank {

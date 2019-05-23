@@ -1,3 +1,17 @@
+import dnd.hero.Hero;
+import dnd.hero.Mage;
+import dnd.hero.Warrior;
+import dnd.philtre.Philtre;
+import dnd.philtre.PhiltreRank;
+import dnd.shield.Shield;
+import dnd.shield.ShieldRank;
+import dnd.spell.Spell;
+import dnd.spell.SpellAttribute;
+import dnd.spell.SpellType;
+import dnd.weapon.Weapon;
+import dnd.weapon.WeaponAttribute;
+import dnd.weapon.WeaponType;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,7 +22,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Hero> heroes = new ArrayList<Hero>();
+        ArrayList<Hero> heroes = new ArrayList<>();
 
         System.out.println("\n" +
                 "  / \\ / \\ / \\ / \\ / \\ / \\ / \\   / \\   / \\ / \\ / \\ / \\ / \\ / \\ / \\ \n" +
@@ -355,7 +369,7 @@ public class Main {
                                                 spell.setSpellPower(spellPower);
 
                                                 ((Mage) heroes.get(selected)).setSpell(spell);
-                                                ((Mage) heroes.get(selected)).setPhiltre(philtre);
+                                                ((dnd.hero.Mage) heroes.get(selected)).setPhiltre(philtre);
                                             }
                                             break;
 

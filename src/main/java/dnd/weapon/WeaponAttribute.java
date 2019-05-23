@@ -1,3 +1,5 @@
+package dnd.weapon;
+
 import java.util.Random;
 
 public enum WeaponAttribute {

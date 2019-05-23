@@ -1,3 +1,5 @@
+package dnd.weapon;
+
 public class Weapon {
 
     private WeaponAttribute attribute;

@@ -1,3 +1,5 @@
+package dnd.hero;
+
 public abstract class Hero {
 
     private String name;

@@ -1,3 +1,5 @@
+package dnd.spell;
+
 import java.util.Random;
 
 public enum SpellAttribute {

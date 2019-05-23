@@ -1,3 +1,5 @@
+package dnd.shield;
+
 public class Shield {
 
     private ShieldRank rank;
