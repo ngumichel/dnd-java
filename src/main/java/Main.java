@@ -10,13 +10,18 @@ public class Main {
 
         ArrayList<Hero> heroes = new ArrayList<Hero>();
 
+        System.out.println("\n" +
+                "  / \\ / \\ / \\ / \\ / \\ / \\ / \\   / \\   / \\ / \\ / \\ / \\ / \\ / \\ / \\ \n" +
+                " ( D | U | N | G | E | O | N ) ( & ) ( D | R | A | G | O | N | S )\n" +
+                "  \\ / \\ / \\ / \\ / \\ / \\ / \\ /   \\ /   \\ / \\ / \\ / \\ / \\ / \\ / \\ / \n");
+
         boolean game = true;
         while (game) {
 
             Scanner home = new Scanner(System.in);
-            System.out.println("DUNGEON & DRAGON");
             System.out.println();
             System.out.println("What would you like to do ?\n" +
+                    "______________________________________\n" +
                     "1. Create a new Hero\n" +
                     "2. See the list of Heroes\n" +
                     "3. Edit a Hero\n" +
@@ -56,46 +61,46 @@ public class Main {
                             Weapon weapon = new Weapon(WeaponAttribute.random(), WeaponType.random());
                             Shield shield = new Shield(ShieldRank.random());
 
-                            int aPower = 0;
-                            int tPower = 0;
+                            int waPower = 0;
+                            int wtPower = 0;
                             int weaponPower;
 
                             switch (weapon.getAttribute()) {
                                 case Burning:
-                                    aPower = 3;
+                                    waPower = 3;
                                     break;
                                 case Frost:
-                                    aPower = 2;
+                                    waPower = 2;
                                     break;
                                 case Crystal:
-                                    aPower = 5;
+                                    waPower = 5;
                                     break;
                                 case Storm:
-                                    aPower = 7;
+                                    waPower = 7;
                                     break;
                                 case Ultimate:
-                                    aPower = 9;
+                                    waPower = 9;
                                     break;
                             }
 
                             switch (weapon.getType()) {
                                 case Spear:
-                                    tPower = 7;
+                                    wtPower = 7;
                                     break;
                                 case Sword:
-                                    tPower = 3;
+                                    wtPower = 3;
                                     break;
                                 case Greatsword:
-                                    tPower = 8;
+                                    wtPower = 8;
                                     break;
                                 case Hammer:
-                                    tPower = 6;
+                                    wtPower = 6;
                                     break;
                                 case Bow:
-                                    tPower = 4;
+                                    wtPower = 4;
                                     break;
                             }
-                            weaponPower = aPower + tPower;
+                            weaponPower = waPower + wtPower;
                             weapon.setWeaponPower(weaponPower);
 
                             Hero warrior = new Warrior(name, "image", heroHealth, heroPower, shield, weapon);
@@ -114,46 +119,46 @@ public class Main {
                             Spell spell = new Spell(SpellAttribute.random(), SpellType.random());
                             Philtre philtre = new Philtre(PhiltreRank.random());
 
-                            int sPower = 0;
-                            int spPower = 0;
+                            int saPower = 0;
+                            int stPower = 0;
                             int spellPower;
 
                             switch (spell.getAttribute()) {
                                 case Fire:
-                                    sPower = 4;
+                                    saPower = 4;
                                     break;
                                 case Ice:
-                                    sPower = 3;
+                                    saPower = 3;
                                     break;
                                 case Lightning:
-                                    sPower = 5;
+                                    saPower = 5;
                                     break;
                                 case Dark:
-                                    sPower = 7;
+                                    saPower = 7;
                                     break;
                                 case Ultimate:
-                                    sPower = 9;
+                                    saPower = 9;
                                     break;
                             }
 
                             switch (spell.getType()) {
                                 case Ball:
-                                    spPower = 3;
+                                    stPower = 3;
                                     break;
                                 case Beam:
-                                    spPower = 6;
+                                    stPower = 6;
                                     break;
                                 case Lance:
-                                    spPower = 5;
+                                    stPower = 5;
                                     break;
                                 case Meteor:
-                                    spPower = 8;
+                                    stPower = 8;
                                     break;
                                 case Wall:
-                                    spPower = 7;
+                                    stPower = 7;
                                     break;
                             }
-                            spellPower = sPower + spPower;
+                            spellPower = saPower + stPower;
                             spell.setSpellPower(spellPower);
 
                             Hero mage = new Mage(name, "image", heroHealth, heroPower, philtre, spell);
@@ -170,10 +175,10 @@ public class Main {
                             String answer = again.nextLine();
                             System.out.println();
 
-                            if (answer.equals("yes")) {
+                            if (answer.equals("yes") || answer.equals("y")) {
                                 create = true;
                                 error = false;
-                            } else if (answer.equals("no")) {
+                            } else if (answer.equals("no") || answer.equals("n")) {
                                 create = false;
                                 error = false;
                             } else {
@@ -185,18 +190,21 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("You choose to see your Heroes!");
-                    System.out.println();
-
-                    for (int i = 0; i < heroes.size(); i++) {
-                        System.out.println(i + ". " + heroes.get(i));
+                    if (heroes.size() == 0) {
+                        System.out.println("You have no Heroes! Go make some~");
                         System.out.println();
+                    } else {
+                        System.out.println("You choose to see your Heroes!");
+                        System.out.println();
+
+                        for (int i = 0; i < heroes.size(); i++) {
+                            System.out.println(i + ". " + heroes.get(i));
+                            System.out.println();
+                        }
                     }
                     break;
 
                 case 3:
-
-
                     boolean edit = true;
                     while (edit) {
 
@@ -218,64 +226,157 @@ public class Main {
                             int selected = selectHero.nextInt();
                             System.out.println();
 
-                            boolean editHero = true;
-                            while (editHero) {
+                            if (selected == 88) {
+                                edit = false;
+                            } else {
 
-                                System.out.println(heroes.get(selected));
-                                System.out.println();
+                                boolean editHero = true;
+                                while (editHero) {
 
-                                Scanner editChoice = new Scanner(System.in);
-                                System.out.println("What would you like to do ?\n" +
-                                        "1. Change your name\n" +
-                                        "2. Change your equipments\n" +
-                                        "3. Delete your Hero\n" +
-                                        "4. Back to Hero selection\n" +
-                                        "5. Back to main menu");
-                                int editAnswer = editChoice.nextInt();
-                                System.out.println();
+                                    System.out.println(heroes.get(selected));
+                                    System.out.println();
 
-                                switch (editAnswer) {
-                                    case 1:
-                                        Scanner newNameInput = new Scanner(System.in);
-                                        System.out.println("Enter your new name : ");
-                                        String newName = newNameInput.nextLine();
-                                        heroes.get(selected).setName(newName);
-                                        System.out.println("Your new name is " + newName);
-                                        System.out.println();
-                                        break;
+                                    Scanner editChoice = new Scanner(System.in);
+                                    System.out.println("What would you like to do ?\n" +
+                                            "______________________________________\n" +
+                                            "1. Change your name\n" +
+                                            "2. Change your equipments\n" +
+                                            "3. Delete your Hero\n" +
+                                            "4. Back to Hero selection\n" +
+                                            "5. Back to main menu");
+                                    int editAnswer = editChoice.nextInt();
+                                    System.out.println();
 
-                                    case 2:
-                                        Class heroClass = heroes.get(selected).getClass();
-                                        if (heroClass == Warrior) {
-                                            Weapon weapon = new Weapon(WeaponAttribute.random(), WeaponType.random());
-                                            Shield shield = new Shield(ShieldRank.random());
-                                            ((Warrior) heroes.get(selected)).setWeapon(weapon);
-                                            ((Warrior) heroes.get(selected)).setShield(shield);
-                                        } else if (heroClass == Mage) {
-                                            Spell spell = new Spell(SpellAttribute.random(), SpellType.random());
-                                            Philtre philtre = new Philtre(PhiltreRank.random());
-                                            ((Mage) heroes.get(selected)).setSpell(spell);
-                                            ((Mage) heroes.get(selected)).setPhiltre(philtre);
-                                        }
-                                        break;
+                                    switch (editAnswer) {
+                                        case 1:
+                                            Scanner newNameInput = new Scanner(System.in);
+                                            System.out.println("Enter your new name : ");
+                                            String newName = newNameInput.nextLine();
+                                            heroes.get(selected).setName(newName);
+                                            System.out.println("Your new name is " + newName);
+                                            System.out.println();
+                                            break;
 
-                                    case 3:
-                                        editHero = false;
-                                        heroes.remove(selected);
-                                        break;
+                                        case 2:
+                                            Class heroClass = heroes.get(selected).getClass();
 
-                                    case 4:
-                                        editHero = false;
-                                        break;
+                                            if (Warrior.class.equals(heroClass)) {
+                                                Weapon weapon = new Weapon(WeaponAttribute.random(), WeaponType.random());
+                                                Shield shield = new Shield(ShieldRank.random());
 
-                                    case 5:
-                                        editHero = false;
-                                        edit = false;
-                                        break;
+                                                int waPower = 0;
+                                                int wtPower = 0;
+                                                int weaponPower;
 
-                                    default:
-                                        System.out.println("Error! Please choose one of the option available!");
-                                        break;
+                                                switch (weapon.getAttribute()) {
+                                                    case Burning:
+                                                        waPower = 3;
+                                                        break;
+                                                    case Frost:
+                                                        waPower = 2;
+                                                        break;
+                                                    case Crystal:
+                                                        waPower = 5;
+                                                        break;
+                                                    case Storm:
+                                                        waPower = 7;
+                                                        break;
+                                                    case Ultimate:
+                                                        waPower = 9;
+                                                        break;
+                                                }
+
+                                                switch (weapon.getType()) {
+                                                    case Spear:
+                                                        wtPower = 7;
+                                                        break;
+                                                    case Sword:
+                                                        wtPower = 3;
+                                                        break;
+                                                    case Greatsword:
+                                                        wtPower = 8;
+                                                        break;
+                                                    case Hammer:
+                                                        wtPower = 6;
+                                                        break;
+                                                    case Bow:
+                                                        wtPower = 4;
+                                                        break;
+                                                }
+                                                weaponPower = waPower + wtPower;
+                                                weapon.setWeaponPower(weaponPower);
+
+                                                ((Warrior) heroes.get(selected)).setWeapon(weapon);
+                                                ((Warrior) heroes.get(selected)).setShield(shield);
+
+                                            } else if (Mage.class.equals(heroClass)) {
+                                                Spell spell = new Spell(SpellAttribute.random(), SpellType.random());
+                                                Philtre philtre = new Philtre(PhiltreRank.random());
+                                                int saPower = 0;
+                                                int stPower = 0;
+                                                int spellPower;
+
+                                                switch (spell.getAttribute()) {
+                                                    case Fire:
+                                                        saPower = 4;
+                                                        break;
+                                                    case Ice:
+                                                        saPower = 3;
+                                                        break;
+                                                    case Lightning:
+                                                        saPower = 5;
+                                                        break;
+                                                    case Dark:
+                                                        saPower = 7;
+                                                        break;
+                                                    case Ultimate:
+                                                        saPower = 9;
+                                                        break;
+                                                }
+
+                                                switch (spell.getType()) {
+                                                    case Ball:
+                                                        stPower = 3;
+                                                        break;
+                                                    case Beam:
+                                                        stPower = 6;
+                                                        break;
+                                                    case Lance:
+                                                        stPower = 5;
+                                                        break;
+                                                    case Meteor:
+                                                        stPower = 8;
+                                                        break;
+                                                    case Wall:
+                                                        stPower = 7;
+                                                        break;
+                                                }
+                                                spellPower = saPower + stPower;
+                                                spell.setSpellPower(spellPower);
+
+                                                ((Mage) heroes.get(selected)).setSpell(spell);
+                                                ((Mage) heroes.get(selected)).setPhiltre(philtre);
+                                            }
+                                            break;
+
+                                        case 3:
+                                            editHero = false;
+                                            heroes.remove(selected);
+                                            break;
+
+                                        case 4:
+                                            editHero = false;
+                                            break;
+
+                                        case 5:
+                                            editHero = false;
+                                            edit = false;
+                                            break;
+
+                                        default:
+                                            System.out.println("Error! Please choose one of the option available!");
+                                            break;
+                                    }
                                 }
                             }
                         }

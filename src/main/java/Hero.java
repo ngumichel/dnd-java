@@ -1,4 +1,4 @@
-public class Hero {
+public abstract class Hero {
 
     private String name;
     private String image;
