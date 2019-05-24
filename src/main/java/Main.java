@@ -1,16 +1,6 @@
 import dnd.hero.Hero;
 import dnd.hero.Mage;
 import dnd.hero.Warrior;
-import dnd.philtre.Philtre;
-import dnd.philtre.PhiltreRank;
-import dnd.shield.Shield;
-import dnd.shield.ShieldRank;
-import dnd.spell.Spell;
-import dnd.spell.SpellAttribute;
-import dnd.spell.SpellType;
-import dnd.weapon.Weapon;
-import dnd.weapon.WeaponAttribute;
-import dnd.weapon.WeaponType;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -211,19 +201,9 @@ public class Main {
                                                 break;
 
                                             case 2:
-                                                Class heroClass = heroes.get(selected).getClass();
-
-                                                if (Warrior.class.equals(heroClass)) {
-
-                                                    ((Warrior) heroes.get(selected)).setWeapon(((Warrior) heroes.get(selected)).genWeapon());
-                                                    ((Warrior) heroes.get(selected)).setShield(((Warrior) heroes.get(selected)).genShield());
-
-                                                } else if (Mage.class.equals(heroClass)) {
-
-                                                    ((Mage) heroes.get(selected)).setSpell(((Mage) heroes.get(selected)).genSpell());
-                                                    ((Mage) heroes.get(selected)).setPhiltre(((Mage) heroes.get(selected)).genPhiltre());
-
-                                                }
+                                                Hero hero = heroes.get(selected);
+                                                hero.genOffense();
+                                                hero.genDefense();
                                                 break;
 
                                             case 3:

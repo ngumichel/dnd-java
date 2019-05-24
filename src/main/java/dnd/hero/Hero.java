@@ -1,5 +1,8 @@
 package dnd.hero;
 
+import dnd.defense.Defense;
+import dnd.offense.Offense;
+
 /**
  * <b>Hero est une classe abstraite représentant les personnages du jeu D&D</b>
  * <p>
@@ -18,6 +21,8 @@ public abstract class Hero {
     private String image;
     private int health;
     private int power;
+    protected Offense offense;
+    protected Defense defense;
 
     public Hero() {
 
@@ -74,5 +79,8 @@ public abstract class Hero {
                 "Health : " + health + "\n" +
                 "Power : " + power + "\n";
     }
+
+    public abstract void genOffense();
+    public abstract void genDefense();
 
 }

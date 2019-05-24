@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35ecca31-b2b4-4018-bfc7-0bd8a1845267" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dnd/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/hero/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dnd/philtre/Philtre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/defense/Philtre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dnd/philtre/PhiltreRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/defense/PhiltreRank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dnd/shield/Shield.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/defense/Shield.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dnd/shield/ShieldRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/defense/ShieldRank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dnd/spell/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/offense/Spell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dnd/spell/SpellAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/offense/SpellAttribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dnd/spell/SpellType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/offense/SpellType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dnd/weapon/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/offense/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dnd/weapon/WeaponAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/offense/WeaponAttribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dnd/weapon/WeaponType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/offense/WeaponType.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,52 +48,66 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/exception/PhiltreException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="237" column="51" lean-forward="true" selection-start-line="237" selection-start-column="51" selection-end-line="237" selection-end-column="51" />
+            <state relative-caret-position="147">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#103#104#0" expanded="true" />
+                <element signature="e#192#193#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Hero.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="48" column="20" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+            <state relative-caret-position="357">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
-                <element signature="docComment;class#Hero#0" />
-                <element signature="docComment;method#Hero#1;class#Hero#0" />
-                <element signature="e#866#867#0" expanded="true" />
-                <element signature="e#893#894#0" expanded="true" />
-                <element signature="e#923#924#0" expanded="true" />
-                <element signature="e#952#953#0" expanded="true" />
-                <element signature="e#981#982#0" expanded="true" />
-                <element signature="e#1009#1010#0" expanded="true" />
-                <element signature="e#1049#1050#0" expanded="true" />
-                <element signature="e#1081#1082#0" expanded="true" />
-                <element signature="e#1122#1123#0" expanded="true" />
-                <element signature="e#1158#1159#0" expanded="true" />
-                <element signature="e#1197#1198#0" expanded="true" />
-                <element signature="e#1231#1232#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#Mage#0" />
+                <element signature="docComment;method#Mage#1;class#Mage#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/exception/ShieldException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="105">
+              <caret line="5" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Mage#0" />
-                <element signature="docComment;method#Mage#1;class#Mage#0" />
-                <element signature="docComment;method#genSpell#0;class#Mage#0" />
-                <element signature="docComment;method#genPhiltre#0;class#Mage#0" />
-                <element signature="e#1088#1089#0" expanded="true" />
-                <element signature="e#1155#1156#0" expanded="true" />
+                <element signature="e#101#102#0" expanded="true" />
+                <element signature="e#189#190#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/exception/SpellException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="5" />
+              <folding>
+                <element signature="e#102#103#0" expanded="true" />
+                <element signature="e#190#191#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/exception/WeaponException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+              <folding>
+                <element signature="e#102#103#0" expanded="true" />
+                <element signature="e#190#191#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,24 +116,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+            <state relative-caret-position="189">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Warrior#0" />
                 <element signature="docComment;method#Warrior#1;class#Warrior#0" />
-                <element signature="docComment;method#genWeapon#0;class#Warrior#0" />
-                <element signature="docComment;method#genShield#0;class#Warrior#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/weapon/Weapon.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/offense/Offense.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+            <state relative-caret-position="42">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+              <folding>
+                <element signature="e#348#349#0" expanded="true" />
+                <element signature="e#417#418#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/defense/Defense.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -162,8 +198,20 @@
         <option value="$PROJECT_DIR$/src/main/java/dnd/spell/Spell.java" />
         <option value="$PROJECT_DIR$/src/main/java/dnd/spell/SpellAttribute.java" />
         <option value="$PROJECT_DIR$/src/main/java/dnd/weapon/WeaponAttribute.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/dnd/hero/Hero.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/offense/Weapon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/offense/Spell.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/defense/ShieldRank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/defense/Shield.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/defense/PhiltreRank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/defense/Philtre.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/offense/Offense.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/defense/Defense.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/exception/WeaponException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/exception/SpellException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/exception/ShieldException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/exception/PhiltreException.java" />
         <option value="$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java" />
         <option value="$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java" />
       </list>
@@ -229,6 +277,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dnd" type="462c0819:PsiDirectoryNode" />
+              <item name="defense" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dnd-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dnd-java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dnd" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dnd-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dnd-java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dnd" type="462c0819:PsiDirectoryNode" />
               <item name="hero" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -238,34 +304,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dnd" type="462c0819:PsiDirectoryNode" />
-              <item name="philtre" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dnd-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dnd-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dnd" type="462c0819:PsiDirectoryNode" />
-              <item name="shield" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dnd-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dnd-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dnd" type="462c0819:PsiDirectoryNode" />
-              <item name="spell" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dnd-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dnd-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dnd" type="462c0819:PsiDirectoryNode" />
-              <item name="weapon" type="462c0819:PsiDirectoryNode" />
+              <item name="offense" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -314,14 +353,14 @@
       </method>
     </configuration>
     <configuration name="Spell" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dnd.spell.Spell" />
+      <option name="MAIN_CLASS_NAME" value="dnd.offense.Spell" />
       <module name="dnd-java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Weapon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dnd.weapon.Weapon" />
+      <option name="MAIN_CLASS_NAME" value="dnd.offense.Weapon" />
       <module name="dnd-java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -350,12 +389,12 @@
       <workItem from="1558334187821" duration="22088000" />
       <workItem from="1558420756884" duration="23246000" />
       <workItem from="1558592974437" duration="4713000" />
-      <workItem from="1558679739370" duration="12037000" />
+      <workItem from="1558679739370" duration="20768000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95754000" />
+    <option name="totallyTimeSpent" value="104485000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -368,7 +407,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="27" width="1861" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49833518" visible="true" weight="0.1922865" />
       <window_info id="Structure" order="1" sideWeight="0.5016648" side_tool="true" weight="0.18347107" />
@@ -379,16 +417,16 @@
       <window_info id="Favorites" order="6" sideWeight="0.5016648" side_tool="true" weight="0.18347107" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.90899" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.32741398" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.78801334" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32963374" />
       <window_info anchor="bottom" id="TODO" order="4" show_stripe_button="false" weight="0.32963374" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.96670365" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.50165564" weight="0.29522753" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.50165564" visible="true" weight="0.963374" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5283019" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.083240844" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Ant Build" order="13" show_stripe_button="false" weight="0.40288568" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -447,165 +485,202 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/shield/ShieldRank.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/offense/WeaponType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="-8">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/philtre/PhiltreRank.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/offense/SpellType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="-8">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/shield/Shield.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/offense/SpellAttribute.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        <state relative-caret-position="-8">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/spell/SpellType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/offense/WeaponAttribute.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        <state relative-caret-position="84">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/offense/Weapon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/spell/Spell.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/offense/Spell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-177">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="252">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#171#172#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/spell/SpellAttribute.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/defense/Philtre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        <state relative-caret-position="210">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/philtre/Philtre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/weapon/WeaponType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding>
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/weapon/WeaponAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding>
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/weapon/Weapon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Mage#0" />
-            <element signature="docComment;method#Mage#1;class#Mage#0" />
-            <element signature="docComment;method#genSpell#0;class#Mage#0" />
-            <element signature="docComment;method#genPhiltre#0;class#Mage#0" />
-            <element signature="e#1088#1089#0" expanded="true" />
-            <element signature="e#1155#1156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Warrior#0" />
-            <element signature="docComment;method#Warrior#1;class#Warrior#0" />
-            <element signature="docComment;method#genWeapon#0;class#Warrior#0" />
-            <element signature="docComment;method#genShield#0;class#Warrior#0" />
+            <element signature="e#162#163#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="237" column="51" lean-forward="true" selection-start-line="237" selection-start-column="51" selection-end-line="237" selection-end-column="51" />
+        <state relative-caret-position="294">
+          <caret line="80" column="80" lean-forward="true" selection-start-line="80" selection-start-column="80" selection-end-line="80" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/defense/Shield.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="e#127#128#0" expanded="true" />
+            <element signature="e#160#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/defense/ShieldRank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/defense/PhiltreRank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Hero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="48" column="20" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+        <state relative-caret-position="553">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Hero#0" />
             <element signature="docComment;method#Hero#1;class#Hero#0" />
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-            <element signature="e#981#982#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1049#1050#0" expanded="true" />
-            <element signature="e#1081#1082#0" expanded="true" />
-            <element signature="e#1122#1123#0" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/defense/Defense.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/offense/Offense.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding>
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/exception/WeaponException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+          <folding>
+            <element signature="e#102#103#0" expanded="true" />
+            <element signature="e#190#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/exception/SpellException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="5" />
+          <folding>
+            <element signature="e#102#103#0" expanded="true" />
+            <element signature="e#190#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/exception/ShieldException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="5" />
+          <folding>
+            <element signature="e#101#102#0" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/exception/PhiltreException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#103#104#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Warrior#0" />
+            <element signature="docComment;method#Warrior#1;class#Warrior#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Mage#0" />
+            <element signature="docComment;method#Mage#1;class#Mage#0" />
           </folding>
         </state>
       </provider>
