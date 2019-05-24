@@ -3,16 +3,22 @@ package dnd.spell;
 import java.util.Random;
 
 public enum SpellAttribute {
-    Fire(4),
-    Ice(3),
-    Lightning(5),
-    Dark(7),
-    Ultimate(9);
+    Fire("Fire", 4),
+    Ice("Ice", 3),
+    Lightning("Lightning", 5),
+    Dark("Dark", 7),
+    Ultimate("Ultimate", 9);
 
+    private String saName;
     private int saPower;
 
-    SpellAttribute(int power) {
+    SpellAttribute(String name, int power) {
+        this.saName = name;
         this.saPower = power;
+    }
+
+    public String getSaName() {
+        return saName;
     }
 
     public int getSaPower() {

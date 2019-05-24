@@ -2,24 +2,25 @@ package dnd.weapon;
 
 public class Weapon {
 
-    private WeaponAttribute attribute;
-    private WeaponType type;
+    private String attribute;
+    private String type;
     private int WeaponPower;
 
     public Weapon() {
 
     }
 
-    public Weapon(WeaponAttribute wAttribute, WeaponType wType) {
+    public Weapon(String wAttribute, String wType, int wPower) {
         this.attribute = wAttribute;
         this.type = wType;
+        this.WeaponPower = wPower;
     }
 
-    public WeaponAttribute getAttribute() {
+    public String getAttribute() {
         return this.attribute;
     }
 
-    public WeaponType getType() {
+    public String getType() {
         return this.type;
     }
 
@@ -27,11 +28,11 @@ public class Weapon {
         return this.WeaponPower;
     }
 
-    public void setAttribute(WeaponAttribute attribute) {
+    public void setAttribute(String attribute) {
         this.attribute = attribute;
     }
 
-    public void setType(WeaponType type) {
+    public void setType(String type) {
         this.type = type;
     }
 

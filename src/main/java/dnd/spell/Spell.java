@@ -2,24 +2,25 @@ package dnd.spell;
 
 public class Spell {
 
-    private SpellAttribute attribute;
-    private SpellType type;
+    private String attribute;
+    private String type;
     private int SpellPower;
 
     public Spell() {
 
     }
 
-    public Spell(SpellAttribute sAttribute, SpellType sType) {
+    public Spell(String sAttribute, String sType, int sPower) {
         this.attribute = sAttribute;
         this.type = sType;
+        this.SpellPower = sPower;
     }
 
-    public SpellAttribute getAttribute() {
+    public String getAttribute() {
         return this.attribute;
     }
 
-    public SpellType getType() {
+    public String getType() {
         return this.type;
     }
 
@@ -27,11 +28,11 @@ public class Spell {
         return this.SpellPower;
     }
 
-    public void setAttribute(SpellAttribute attribute) {
+    public void setAttribute(String attribute) {
         this.attribute = attribute;
     }
 
-    public void setType(SpellType type) {
+    public void setType(String type) {
         this.type = type;
     }
 

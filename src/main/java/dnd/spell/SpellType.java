@@ -3,16 +3,22 @@ package dnd.spell;
 import java.util.Random;
 
 public enum SpellType {
-    Ball(3),
-    Beam(6),
-    Lance(5),
-    Meteor(8),
-    Wall(7);
+    Ball("Ball",3),
+    Beam("Beam",6),
+    Lance("Lance",5),
+    Meteor("Meteor",8),
+    Wall("Wall",7);
 
+    private String stName;
     private int stPower;
 
-    SpellType(int power) {
+    SpellType(String name, int power) {
+        this.stName = name;
         this.stPower = power;
+    }
+
+    public String getStName() {
+        return stName;
     }
 
     public int getStPower() {

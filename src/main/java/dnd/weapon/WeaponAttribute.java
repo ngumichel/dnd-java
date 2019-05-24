@@ -3,16 +3,22 @@ package dnd.weapon;
 import java.util.Random;
 
 public enum WeaponAttribute {
-    Burning(3),
-    Frost(2),
-    Crystal(5),
-    Storm(7),
-    Ultimate(9);
+    Burning("Burning", 3),
+    Frost("Frost", 2),
+    Crystal("Crystal", 5),
+    Storm("Storm", 7),
+    Ultimate("Ultimate", 9);
 
+    private String waName;
     private int waPower;
 
-    WeaponAttribute(int power) {
+    WeaponAttribute(String name, int power) {
+        this.waName = name;
         this.waPower = power;
+    }
+
+    public String getWaName() {
+        return waName;
     }
 
     public int getWaPower() {

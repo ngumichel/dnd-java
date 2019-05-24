@@ -2,6 +2,10 @@ package dnd.hero;
 
 import dnd.weapon.Weapon;
 import dnd.shield.Shield;
+import dnd.weapon.WeaponAttribute;
+import dnd.weapon.WeaponType;
+
+import java.util.jar.Attributes;
 
 public class Warrior extends Hero {
 
@@ -12,10 +16,10 @@ public class Warrior extends Hero {
 
     }
 
-    public Warrior(String heroName, String heroImage, int heroHealth, int heroPower, Shield heroShield, Weapon weapon) {
+    public Warrior(String heroName, String heroImage, int heroHealth, int heroPower, Weapon heroWeapon, Shield heroShield) {
         super(heroName, heroImage, heroHealth, heroPower);
+        this.weapon = heroWeapon;
         this.shield = heroShield;
-        this.weapon = weapon;
     }
 
     public Warrior(String heroName, String heroImage, int heroHealth, int heroPower) {
@@ -40,6 +44,7 @@ public class Warrior extends Hero {
         this.shield = shield;
     }
 
+    @Override
     public String toString() {
         return super.toString() +
                 "Weapon : " + weapon.description() + "\n" +

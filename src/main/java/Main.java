@@ -85,52 +85,14 @@ public class Main {
                             int heroHealth = (int) (Math.random() * (10 - 5) + 5);
                             int heroPower = (int) (Math.random() * (10 - 5) + 5);
 
-                            Weapon weapon = new Weapon(WeaponAttribute.random(), WeaponType.random());
+                            WeaponAttribute newA = WeaponAttribute.random();
+                            WeaponType newT = WeaponType.random();
+                            int newP = newA.getWaPower() + newT.getWtPower();
+
+                            Weapon weapon = new Weapon(newA.getWaName(), newT.getWtName(), newP);
                             Shield shield = new Shield(ShieldRank.random());
 
-                            int waPower = 0;
-                            int wtPower = 0;
-                            int weaponPower;
-
-                            switch (weapon.getAttribute()) {
-                                case Burning:
-                                    waPower = 3;
-                                    break;
-                                case Frost:
-                                    waPower = 2;
-                                    break;
-                                case Crystal:
-                                    waPower = 5;
-                                    break;
-                                case Storm:
-                                    waPower = 7;
-                                    break;
-                                case Ultimate:
-                                    waPower = 9;
-                                    break;
-                            }
-
-                            switch (weapon.getType()) {
-                                case Spear:
-                                    wtPower = 7;
-                                    break;
-                                case Sword:
-                                    wtPower = 3;
-                                    break;
-                                case Greatsword:
-                                    wtPower = 8;
-                                    break;
-                                case Hammer:
-                                    wtPower = 6;
-                                    break;
-                                case Bow:
-                                    wtPower = 4;
-                                    break;
-                            }
-                            weaponPower = waPower + wtPower;
-                            weapon.setWeaponPower(weaponPower);
-
-                            Hero warrior = new Warrior(name, "image", heroHealth, heroPower, shield, weapon);
+                            Hero warrior = new Warrior(name, "image", heroHealth, heroPower, weapon, shield);
                             heroes.add(warrior);
                             System.out.println("Warrior " + warrior.toString());
                             System.out.println();
@@ -143,52 +105,14 @@ public class Main {
                             int heroHealth = (int) (Math.random() * (6 - 3) + 3);
                             int heroPower = (int) (Math.random() * (15 - 8) + 8);
 
-                            Spell spell = new Spell(SpellAttribute.random(), SpellType.random());
-                            Philtre philtre = new Philtre(PhiltreRank.random());
+                            SpellAttribute newA = SpellAttribute.random();
+                            SpellType newT = SpellType.random();
+                            int newP = newA.getSaPower() + newT.getStPower();
 
-                            int saPower = 0;
-                            int stPower = 0;
-                            int spellPower;
+                            Spell spell = new Spell(newA.getSaName(), newT.getStName(), newP);
+                            Philtre philtre = new Philtre();
 
-                            switch (spell.getAttribute()) {
-                                case Fire:
-                                    saPower = 4;
-                                    break;
-                                case Ice:
-                                    saPower = 3;
-                                    break;
-                                case Lightning:
-                                    saPower = 5;
-                                    break;
-                                case Dark:
-                                    saPower = 7;
-                                    break;
-                                case Ultimate:
-                                    saPower = 9;
-                                    break;
-                            }
-
-                            switch (spell.getType()) {
-                                case Ball:
-                                    stPower = 3;
-                                    break;
-                                case Beam:
-                                    stPower = 6;
-                                    break;
-                                case Lance:
-                                    stPower = 5;
-                                    break;
-                                case Meteor:
-                                    stPower = 8;
-                                    break;
-                                case Wall:
-                                    stPower = 7;
-                                    break;
-                            }
-                            spellPower = saPower + stPower;
-                            spell.setSpellPower(spellPower);
-
-                            Hero mage = new Mage(name, "image", heroHealth, heroPower, philtre, spell);
+                            Hero mage = new Mage(name, "image", heroHealth, heroPower, spell, philtre);
                             heroes.add(mage);
                             System.out.println("Mage " + mage.toString());
                             System.out.println();
@@ -302,101 +226,26 @@ public class Main {
                                                 Class heroClass = heroes.get(selected).getClass();
 
                                                 if (Warrior.class.equals(heroClass)) {
-                                                    Weapon weapon = new Weapon(WeaponAttribute.random(), WeaponType.random());
+                                                    WeaponAttribute newA = WeaponAttribute.random();
+                                                    WeaponType newT = WeaponType.random();
+                                                    int newP = newA.getWaPower() + newT.getWtPower();
+
+                                                    Weapon weapon = new Weapon(newA.getWaName(), newT.getWtName(), newP);
                                                     Shield shield = new Shield(ShieldRank.random());
-
-                                                    int waPower = 0;
-                                                    int wtPower = 0;
-                                                    int weaponPower;
-
-                                                    switch (weapon.getAttribute()) {
-                                                        case Burning:
-                                                            waPower = 3;
-                                                            break;
-                                                        case Frost:
-                                                            waPower = 2;
-                                                            break;
-                                                        case Crystal:
-                                                            waPower = 5;
-                                                            break;
-                                                        case Storm:
-                                                            waPower = 7;
-                                                            break;
-                                                        case Ultimate:
-                                                            waPower = 9;
-                                                            break;
-                                                    }
-
-                                                    switch (weapon.getType()) {
-                                                        case Spear:
-                                                            wtPower = 7;
-                                                            break;
-                                                        case Sword:
-                                                            wtPower = 3;
-                                                            break;
-                                                        case Greatsword:
-                                                            wtPower = 8;
-                                                            break;
-                                                        case Hammer:
-                                                            wtPower = 6;
-                                                            break;
-                                                        case Bow:
-                                                            wtPower = 4;
-                                                            break;
-                                                    }
-                                                    weaponPower = waPower + wtPower;
-                                                    weapon.setWeaponPower(weaponPower);
 
                                                     ((Warrior) heroes.get(selected)).setWeapon(weapon);
                                                     ((Warrior) heroes.get(selected)).setShield(shield);
 
                                                 } else if (Mage.class.equals(heroClass)) {
-                                                    Spell spell = new Spell(SpellAttribute.random(), SpellType.random());
-                                                    Philtre philtre = new Philtre(PhiltreRank.random());
-                                                    int saPower = 0;
-                                                    int stPower = 0;
-                                                    int spellPower;
+                                                    SpellAttribute newA = SpellAttribute.random();
+                                                    SpellType newT = SpellType.random();
+                                                    int newP = newA.getSaPower() + newT.getStPower();
 
-                                                    switch (spell.getAttribute()) {
-                                                        case Fire:
-                                                            saPower = 4;
-                                                            break;
-                                                        case Ice:
-                                                            saPower = 3;
-                                                            break;
-                                                        case Lightning:
-                                                            saPower = 5;
-                                                            break;
-                                                        case Dark:
-                                                            saPower = 7;
-                                                            break;
-                                                        case Ultimate:
-                                                            saPower = 9;
-                                                            break;
-                                                    }
-
-                                                    switch (spell.getType()) {
-                                                        case Ball:
-                                                            stPower = 3;
-                                                            break;
-                                                        case Beam:
-                                                            stPower = 6;
-                                                            break;
-                                                        case Lance:
-                                                            stPower = 5;
-                                                            break;
-                                                        case Meteor:
-                                                            stPower = 8;
-                                                            break;
-                                                        case Wall:
-                                                            stPower = 7;
-                                                            break;
-                                                    }
-                                                    spellPower = saPower + stPower;
-                                                    spell.setSpellPower(spellPower);
+                                                    Spell spell = new Spell(newA.getSaName(), newT.getStName(), newP);
+                                                    Philtre philtre = new Philtre();
 
                                                     ((Mage) heroes.get(selected)).setSpell(spell);
-                                                    ((dnd.hero.Mage) heroes.get(selected)).setPhiltre(philtre);
+                                                    ((Mage) heroes.get(selected)).setPhiltre(philtre);
                                                 }
                                                 break;
 

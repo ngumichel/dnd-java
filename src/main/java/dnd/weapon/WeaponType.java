@@ -3,16 +3,22 @@ package dnd.weapon;
 import java.util.Random;
 
 public enum WeaponType {
-    Spear(7),
-    Sword(3),
-    Greatsword(8),
-    Hammer(6),
-    Bow(4);
+    Spear("Spear", 7),
+    Sword("Sword", 3),
+    Greatsword("Greatsword", 8),
+    Hammer("Hammer", 6),
+    Bow("Bow", 4);
 
+    private String wtName;
     private int wtPower;
 
-    WeaponType(int power) {
+    WeaponType(String name, int power) {
+        this.wtName = name;
         this.wtPower = power;
+    }
+
+    public String getWtName() {
+        return wtName;
     }
 
     public int getWtPower() {

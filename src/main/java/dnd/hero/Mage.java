@@ -11,15 +11,15 @@ public class Mage extends Hero {
     public Mage() {
     }
 
-    public Mage(String heroName, String heroImage, int heroHealth, int heroPower, Philtre heroPhiltre, Spell spell) {
+    public Mage(String heroName, String heroImage, int heroHealth, int heroPower,Spell spell, Philtre heroPhiltre) {
         super(heroName, heroImage, heroHealth, heroPower);
         this.philtre = heroPhiltre;
         this.spell = spell;
     }
 
-    public Mage(String heroName, String heroImage, int heroHealth, int heroPower, Philtre heroPhiltre) {
+    public Mage(String heroName, String heroImage, int heroHealth, int heroPower) {
         super(heroName, heroImage, heroHealth, heroPower);
-        this.philtre = heroPhiltre;
+        this.philtre = new Philtre();
         this.spell = new Spell();
     }
 
