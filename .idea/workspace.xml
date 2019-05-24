@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35ecca31-b2b4-4018-bfc7-0bd8a1845267" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dnd/hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/hero/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dnd/weapon/WeaponAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dnd/weapon/WeaponAttribute.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,24 +36,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-483">
-              <caret line="228" column="51" lean-forward="true" selection-start-line="228" selection-start-column="51" selection-end-line="228" selection-end-column="51" />
+            <state relative-caret-position="288">
+              <caret line="237" column="51" lean-forward="true" selection-start-line="237" selection-start-column="51" selection-end-line="237" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Hero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="483">
+              <caret line="48" column="20" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1067#1068#0" expanded="true" />
-                <element signature="e#1129#1130#0" expanded="true" />
+                <element signature="docComment;class#Hero#0" />
+                <element signature="docComment;method#Hero#1;class#Hero#0" />
+                <element signature="e#866#867#0" expanded="true" />
+                <element signature="e#893#894#0" expanded="true" />
+                <element signature="e#923#924#0" expanded="true" />
+                <element signature="e#952#953#0" expanded="true" />
+                <element signature="e#981#982#0" expanded="true" />
+                <element signature="e#1009#1010#0" expanded="true" />
+                <element signature="e#1049#1050#0" expanded="true" />
+                <element signature="e#1081#1082#0" expanded="true" />
+                <element signature="e#1122#1123#0" expanded="true" />
+                <element signature="e#1158#1159#0" expanded="true" />
+                <element signature="e#1197#1198#0" expanded="true" />
+                <element signature="e#1231#1232#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,12 +73,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+            <state relative-caret-position="120">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;class#Mage#0" />
+                <element signature="docComment;method#Mage#1;class#Mage#0" />
+                <element signature="docComment;method#genSpell#0;class#Mage#0" />
+                <element signature="docComment;method#genPhiltre#0;class#Mage#0" />
                 <element signature="e#1088#1089#0" expanded="true" />
                 <element signature="e#1155#1156#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#Warrior#0" />
+                <element signature="docComment;method#Warrior#1;class#Warrior#0" />
+                <element signature="docComment;method#genWeapon#0;class#Warrior#0" />
+                <element signature="docComment;method#genShield#0;class#Warrior#0" />
               </folding>
             </state>
           </provider>
@@ -122,7 +153,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Warrior.java" />
         <option value="$PROJECT_DIR$/src/main/java/Hero.java" />
         <option value="$PROJECT_DIR$/src/main/java/dnd/shield/Shield.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dnd/hero/Hero.java" />
         <option value="$PROJECT_DIR$/src/main/java/dnd/philtre/Philtre.java" />
         <option value="$PROJECT_DIR$/src/main/java/dnd/philtre/PhiltreRank.java" />
         <option value="$PROJECT_DIR$/src/main/java/dnd/shield/ShieldRank.java" />
@@ -132,9 +162,10 @@
         <option value="$PROJECT_DIR$/src/main/java/dnd/spell/Spell.java" />
         <option value="$PROJECT_DIR$/src/main/java/dnd/spell/SpellAttribute.java" />
         <option value="$PROJECT_DIR$/src/main/java/dnd/weapon/WeaponAttribute.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/hero/Hero.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java" />
       </list>
     </option>
   </component>
@@ -199,6 +230,33 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dnd" type="462c0819:PsiDirectoryNode" />
               <item name="hero" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dnd-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dnd-java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dnd" type="462c0819:PsiDirectoryNode" />
+              <item name="philtre" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dnd-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dnd-java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dnd" type="462c0819:PsiDirectoryNode" />
+              <item name="shield" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dnd-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dnd-java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dnd" type="462c0819:PsiDirectoryNode" />
+              <item name="spell" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dnd-java" type="b2602c69:ProjectViewProjectNode" />
@@ -292,12 +350,12 @@
       <workItem from="1558334187821" duration="22088000" />
       <workItem from="1558420756884" duration="23246000" />
       <workItem from="1558592974437" duration="4713000" />
-      <workItem from="1558679739370" duration="8221000" />
+      <workItem from="1558679739370" duration="12037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91938000" />
+    <option name="totallyTimeSpent" value="95754000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -312,7 +370,7 @@
     <frame x="1920" y="27" width="1861" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49833518" visible="true" weight="0.1922865" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49833518" visible="true" weight="0.1922865" />
       <window_info id="Structure" order="1" sideWeight="0.5016648" side_tool="true" weight="0.18347107" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -325,12 +383,12 @@
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32963374" />
       <window_info anchor="bottom" id="TODO" order="4" show_stripe_button="false" weight="0.32963374" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.96670365" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.50165564" visible="true" weight="0.2963374" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.50165564" weight="0.29522753" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.92230856" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5283019" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Ant Build" order="13" show_stripe_button="false" weight="0.40288568" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -386,17 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Hero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-          <folding>
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -503,34 +550,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1067#1068#0" expanded="true" />
-            <element signature="e#1129#1130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Mage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+        <state relative-caret-position="120">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Mage#0" />
+            <element signature="docComment;method#Mage#1;class#Mage#0" />
+            <element signature="docComment;method#genSpell#0;class#Mage#0" />
+            <element signature="docComment;method#genPhiltre#0;class#Mage#0" />
             <element signature="e#1088#1089#0" expanded="true" />
             <element signature="e#1155#1156#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Warrior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Warrior#0" />
+            <element signature="docComment;method#Warrior#1;class#Warrior#0" />
+            <element signature="docComment;method#genWeapon#0;class#Warrior#0" />
+            <element signature="docComment;method#genShield#0;class#Warrior#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-483">
-          <caret line="228" column="51" lean-forward="true" selection-start-line="228" selection-start-column="51" selection-end-line="228" selection-end-column="51" />
+        <state relative-caret-position="288">
+          <caret line="237" column="51" lean-forward="true" selection-start-line="237" selection-start-column="51" selection-end-line="237" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dnd/hero/Hero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="48" column="20" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding>
+            <element signature="docComment;class#Hero#0" />
+            <element signature="docComment;method#Hero#1;class#Hero#0" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="e#1049#1050#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1197#1198#0" expanded="true" />
+            <element signature="e#1231#1232#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

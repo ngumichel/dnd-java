@@ -6,8 +6,16 @@ import dnd.shield.Shield;
 import dnd.weapon.WeaponAttribute;
 import dnd.weapon.WeaponType;
 
-import java.util.jar.Attributes;
-
+/**
+ * <b>Warrior est une classe qui hérite des attributs de la classe Hero</b>
+ * <p>
+ *     Il possède les caractéristiques suivante :
+ *     <ul>
+ *         <li>Une arme de type Weapon</li>
+ *         <li>Un bouclier de type Shield</li>
+ *     </ul>
+ * </p>
+ */
 public class Warrior extends Hero {
 
     private Weapon weapon;
@@ -17,12 +25,33 @@ public class Warrior extends Hero {
 
     }
 
+    /**
+     * Constructeur Warrior
+     * <p>
+     *     A la création d'un objet Warrior, il hérite des attributs de Hero.
+     *     Une arme et un bouclier sont générer aléatoirment à partir d'une énumeration.
+     * </p>
+     *
+     * @param heroName
+     *          Le nom du Warrior.
+     * @param heroImage
+     *          Le lien vers l'image du Warrior.
+     * @param heroHealth
+     *          Le niveau de santé du Warrior.
+     * @param heroPower
+     *          Le niveau de puissance du Warrior.
+     */
     public Warrior(String heroName, String heroImage, int heroHealth, int heroPower) {
         super(heroName, heroImage, heroHealth, heroPower);
         this.weapon = genWeapon();
         this.shield = genShield();
     }
 
+    /**
+     * Génère une arme aléatoirement à partir d'une liste d'énumeration.
+     *
+     * @return L'arme générée.
+     */
     public Weapon genWeapon() {
         WeaponAttribute newA = WeaponAttribute.random();
         WeaponType newT = WeaponType.random();
@@ -30,6 +59,11 @@ public class Warrior extends Hero {
         return new Weapon(newA.getWaName(), newT.getWtName(), newP);
     }
 
+    /**
+     * Génère un bouclier aléatoirement à partir d'une liste d'énumeration.
+     *
+     * @return Le bouclier généré.
+     */
     public Shield genShield() {
         return new Shield(ShieldRank.random());
     }
