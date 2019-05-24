@@ -5,8 +5,6 @@ import dnd.offense.WeaponAttribute;
 import dnd.offense.WeaponType;
 import dnd.defense.Shield;
 import dnd.defense.ShieldRank;
-import dnd.exception.WeaponException;
-import dnd.exception.ShieldException;
 
 /**
  * <b>Warrior est une classe qui hérite des attributs de la classe Hero</b>
@@ -19,9 +17,6 @@ import dnd.exception.ShieldException;
  * </p>
  */
 public class Warrior extends Hero {
-
-    private Weapon weapon;
-    private Shield shield;
 
     public Warrior() {
 
@@ -55,22 +50,6 @@ public class Warrior extends Hero {
     public void genDefense() {
         ShieldRank newSh = ShieldRank.random();
         super.defense = new Shield(newSh.getSrName());
-    }
-
-    public Weapon getWeapon() {
-        return this.weapon;
-    }
-
-    public Shield getShield() {
-        return this.shield;
-    }
-
-    public void setWeapon(Weapon weapon) throws WeaponException {
-        throw new WeaponException();
-    }
-
-    public void setShield(Shield shield) throws ShieldException {
-        throw new ShieldException();
     }
 
     public String toString() {

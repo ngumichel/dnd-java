@@ -5,8 +5,6 @@ import dnd.offense.SpellAttribute;
 import dnd.offense.SpellType;
 import dnd.defense.Philtre;
 import dnd.defense.PhiltreRank;
-import dnd.exception.PhiltreException;
-import dnd.exception.SpellException;
 
 /**
  * <b>Mage est une classe qui hérite des attributs de la classe Hero</b>
@@ -19,9 +17,6 @@ import dnd.exception.SpellException;
  * </p>
  */
 public class Mage extends Hero {
-
-    private Spell spell;
-    private Philtre philtre;
 
     public Mage() {
 
@@ -55,22 +50,6 @@ public class Mage extends Hero {
     public void genDefense() {
         PhiltreRank newPh = PhiltreRank.random();
         super.defense = new Philtre(newPh.getPrName());
-    }
-
-    public Spell getSpell() {
-        return this.spell;
-    }
-
-    public Philtre getPhiltre() {
-        return philtre;
-    }
-
-    public void setSpell(Spell spell) throws SpellException {
-        throw new SpellException();
-    }
-
-    public void setPhiltre(Philtre philtre) throws PhiltreException {
-        throw new PhiltreException();
     }
 
     public String toString() {
