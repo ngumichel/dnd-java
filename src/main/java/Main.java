@@ -85,15 +85,9 @@ public class Main {
                             int heroHealth = (int) (Math.random() * (10 - 5) + 5);
                             int heroPower = (int) (Math.random() * (10 - 5) + 5);
 
-                            WeaponAttribute newA = WeaponAttribute.random();
-                            WeaponType newT = WeaponType.random();
-                            int newP = newA.getWaPower() + newT.getWtPower();
-
-                            Weapon weapon = new Weapon(newA.getWaName(), newT.getWtName(), newP);
-                            Shield shield = new Shield(ShieldRank.random());
-
-                            Hero warrior = new Warrior(name, "image", heroHealth, heroPower, weapon, shield);
+                            Hero warrior = new Warrior(name, "image", heroHealth, heroPower);
                             heroes.add(warrior);
+
                             System.out.println("Warrior " + warrior.toString());
                             System.out.println();
 
@@ -105,15 +99,9 @@ public class Main {
                             int heroHealth = (int) (Math.random() * (6 - 3) + 3);
                             int heroPower = (int) (Math.random() * (15 - 8) + 8);
 
-                            SpellAttribute newA = SpellAttribute.random();
-                            SpellType newT = SpellType.random();
-                            int newP = newA.getSaPower() + newT.getStPower();
-
-                            Spell spell = new Spell(newA.getSaName(), newT.getStName(), newP);
-                            Philtre philtre = new Philtre();
-
-                            Hero mage = new Mage(name, "image", heroHealth, heroPower, spell, philtre);
+                            Hero mage = new Mage(name, "image", heroHealth, heroPower);
                             heroes.add(mage);
+
                             System.out.println("Mage " + mage.toString());
                             System.out.println();
                         }
@@ -226,26 +214,15 @@ public class Main {
                                                 Class heroClass = heroes.get(selected).getClass();
 
                                                 if (Warrior.class.equals(heroClass)) {
-                                                    WeaponAttribute newA = WeaponAttribute.random();
-                                                    WeaponType newT = WeaponType.random();
-                                                    int newP = newA.getWaPower() + newT.getWtPower();
 
-                                                    Weapon weapon = new Weapon(newA.getWaName(), newT.getWtName(), newP);
-                                                    Shield shield = new Shield(ShieldRank.random());
-
-                                                    ((Warrior) heroes.get(selected)).setWeapon(weapon);
-                                                    ((Warrior) heroes.get(selected)).setShield(shield);
+                                                    ((Warrior) heroes.get(selected)).setWeapon(((Warrior) heroes.get(selected)).genWeapon());
+                                                    ((Warrior) heroes.get(selected)).setShield(((Warrior) heroes.get(selected)).genShield());
 
                                                 } else if (Mage.class.equals(heroClass)) {
-                                                    SpellAttribute newA = SpellAttribute.random();
-                                                    SpellType newT = SpellType.random();
-                                                    int newP = newA.getSaPower() + newT.getStPower();
 
-                                                    Spell spell = new Spell(newA.getSaName(), newT.getStName(), newP);
-                                                    Philtre philtre = new Philtre();
+                                                    ((Mage) heroes.get(selected)).setSpell(((Mage) heroes.get(selected)).genSpell());
+                                                    ((Mage) heroes.get(selected)).setPhiltre(((Mage) heroes.get(selected)).genPhiltre());
 
-                                                    ((Mage) heroes.get(selected)).setSpell(spell);
-                                                    ((Mage) heroes.get(selected)).setPhiltre(philtre);
                                                 }
                                                 break;
 

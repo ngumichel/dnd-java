@@ -3,7 +3,7 @@ package dnd.weapon;
 import java.util.Random;
 
 public enum WeaponAttribute {
-    Burning("Burning", 3),
+    Burning("Blazing", 3),
     Frost("Frost", 2),
     Crystal("Crystal", 5),
     Storm("Storm", 7),

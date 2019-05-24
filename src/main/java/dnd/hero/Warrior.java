@@ -1,5 +1,6 @@
 package dnd.hero;
 
+import dnd.shield.ShieldRank;
 import dnd.weapon.Weapon;
 import dnd.shield.Shield;
 import dnd.weapon.WeaponAttribute;
@@ -16,16 +17,21 @@ public class Warrior extends Hero {
 
     }
 
-    public Warrior(String heroName, String heroImage, int heroHealth, int heroPower, Weapon heroWeapon, Shield heroShield) {
-        super(heroName, heroImage, heroHealth, heroPower);
-        this.weapon = heroWeapon;
-        this.shield = heroShield;
-    }
-
     public Warrior(String heroName, String heroImage, int heroHealth, int heroPower) {
         super(heroName, heroImage, heroHealth, heroPower);
-        this.shield = new Shield();
-        this.weapon = new Weapon();
+        this.weapon = genWeapon();
+        this.shield = genShield();
+    }
+
+    public Weapon genWeapon() {
+        WeaponAttribute newA = WeaponAttribute.random();
+        WeaponType newT = WeaponType.random();
+        int newP = newA.getWaPower() + newT.getWtPower();
+        return new Weapon(newA.getWaName(), newT.getWtName(), newP);
+    }
+
+    public Shield genShield() {
+        return new Shield(ShieldRank.random());
     }
 
     public Weapon getWeapon() {

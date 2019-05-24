@@ -1,7 +1,10 @@
 package dnd.hero;
 
+import dnd.philtre.PhiltreRank;
 import dnd.spell.Spell;
 import dnd.philtre.Philtre;
+import dnd.spell.SpellAttribute;
+import dnd.spell.SpellType;
 
 public class Mage extends Hero {
 
@@ -11,16 +14,21 @@ public class Mage extends Hero {
     public Mage() {
     }
 
-    public Mage(String heroName, String heroImage, int heroHealth, int heroPower,Spell spell, Philtre heroPhiltre) {
-        super(heroName, heroImage, heroHealth, heroPower);
-        this.philtre = heroPhiltre;
-        this.spell = spell;
-    }
-
     public Mage(String heroName, String heroImage, int heroHealth, int heroPower) {
         super(heroName, heroImage, heroHealth, heroPower);
-        this.philtre = new Philtre();
-        this.spell = new Spell();
+        this.spell = genSpell();
+        this.philtre = genPhiltre();
+    }
+
+    public Spell genSpell() {
+        SpellAttribute newA = SpellAttribute.random();
+        SpellType newT = SpellType.random();
+        int newP = newA.getSaPower() + newT.getStPower();
+        return new Spell(newA.getSaName(), newT.getStName(), newP);
+    }
+
+    public Philtre genPhiltre() {
+        return new Philtre(PhiltreRank.random());
     }
 
     public Spell getSpell() {
