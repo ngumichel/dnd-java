@@ -58,4 +58,8 @@ public class Warrior extends Hero {
                 "Shield : " + defense.description() + " Shield";
     }
 
+    public String display() {
+        return "Warrior ";
+    }
+
 }

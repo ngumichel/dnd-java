@@ -58,4 +58,8 @@ public class Mage extends Hero {
                 "Philtre : " + defense.description() + " Philtre";
     }
 
+    public String display() {
+        return "Mage ";
+    }
+
 }

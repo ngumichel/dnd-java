@@ -1,9 +1,9 @@
 package dnd.hero;
 
 import dnd.defense.Defense;
+import dnd.offense.Offense;
 import dnd.exception.DefenseException;
 import dnd.exception.OffenseException;
-import dnd.offense.Offense;
 
 /**
  * <b>Hero est une classe abstraite représentant les personnages du jeu D&D</b>
@@ -88,8 +88,9 @@ public abstract class Hero {
         throw new DefenseException();
     }
 
+    @Override
     public String toString() {
-        return name + "\n" +
+        return display() + name + "\n" +
                 "Health : " + health + "\n" +
                 "Power : " + power + "\n";
     }
@@ -98,4 +99,5 @@ public abstract class Hero {
 
     public abstract void genDefense();
 
+    public abstract String display();
 }
