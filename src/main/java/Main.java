@@ -1,3 +1,5 @@
+import dnd.game.GameBoard;
+import dnd.game.GameCell;
 import dnd.hero.Hero;
 import dnd.hero.Mage;
 import dnd.hero.Warrior;
@@ -27,13 +29,26 @@ public class Main {
         }
     }
 
+    /**
+     * Menu principal du jeu :
+     * 1. créer un plateau de jeu
+     * 2. créer un nouveau Hero, createHero()
+     * 3. afficher la liste des Hero, listHeroes()
+     * 4. éditer un Hero, editHero()
+     * 5. met fin au jeu
+     *
+     * @param home, input du choix de l'utilisateur
+     *
+     * @return le choix de l'utilisateur
+     */
     private static int chooseAction(Scanner home) {
         System.out.println("What would you like to do ?\n" +
                 "______________________________________\n" +
-                "1. Create a new Hero\n" +
-                "2. See the list of Heroes\n" +
-                "3. Edit a Hero\n" +
-                "4. End Game");
+                "1. Play Game\n" +
+                "2. Create a new Hero\n" +
+                "3. See the list of Heroes\n" +
+                "4. Edit a Hero\n" +
+                "5. End Game");
         int choice;
         try {
             choice = home.nextInt();
@@ -52,18 +67,33 @@ public class Main {
         Stop;
     }
 
+    /**
+     * Méthode qui éxecute le choix de l'utilisateur
+     *
+     * @param heroes, tableau contenant les Hero
+     * @param choice, choix de l'utilisateur
+     * @return le Status du jeu, Live ou Stop
+     */
     private static Status executeAction(ArrayList<Hero> heroes, int choice) {
         switch (choice) {
             case 1:
-                createHero(heroes);
+                GameBoard newBoard = new GameBoard();
+
+                for (int i = 0; i<newBoard.getGameCellsList().size(); i++) {
+                    System.out.println(newBoard.getGameCellsList().get(i).description());
+                }
+
                 return Status.Live;
             case 2:
-                listHeroes(heroes);
+                createHero(heroes);
                 return Status.Live;
             case 3:
-                editHero(heroes);
+                listHeroes(heroes);
                 return Status.Live;
             case 4:
+                editHero(heroes);
+                return Status.Live;
+            case 5:
                 return Status.Stop;
             default:
                 System.out.println("Error! Please select one of the available option!");
@@ -72,6 +102,17 @@ public class Main {
         }
     }
 
+    /**
+     * Méthode pour créer un Hero avec le choix du nom et de la classe.
+     * @see chooseName()
+     * @see choosePath()
+     * @see createMage()
+     * @see createWarrior()
+     *
+     * Option pour continuer de créer un Hero en boucle si l'utilisateur le souhaite.
+     *
+     * @param heroes, liste des Hero qui servira a stocker les Hero
+     */
     private static void createHero(ArrayList<Hero> heroes) {
         System.out.println("You choose to create a new Hero!");
         System.out.println();
@@ -87,15 +128,17 @@ public class Main {
             int path = choosePath(pathScan);
             System.out.println();
 
-
+            Hero hero = null;
             if (path == 1) {
-                createWarrior(heroes, name);
+                hero = createWarrior(name);
                 System.out.println();
 
             } else if (path == 2) {
-                createMage(heroes, name);
+                hero = createMage(name);
                 System.out.println();
             }
+
+            heroes.add(hero);
 
             boolean error = true;
             while (error) {
@@ -120,6 +163,12 @@ public class Main {
         return;
     }
 
+    /**
+     * Méthode pour créer le nom du Hero
+     *
+     * @param nameScan, input du nom de l'Hero
+     * @return le nom du Hero
+     */
     private static String chooseName(Scanner nameScan) {
         System.out.println("Choose a name for your hero :");
         String name = nameScan.nextLine();
@@ -127,6 +176,14 @@ public class Main {
         return name;
     }
 
+    /**
+     * Méthode pour choisir la classe du Hero
+     * 1. Classe Warrior
+     * 2. Classe Mage
+     *
+     * @param pathScan, input du choix de la classe
+     * @returnle choix de la classe
+     */
     private static int choosePath(Scanner pathScan) {
         System.out.println("Choose your path :\n" +
                 "______________________________________\n" +
@@ -135,7 +192,14 @@ public class Main {
         return pathScan.nextInt();
     }
 
-    private static void createMage(ArrayList<Hero> heroes, String name) {
+    /**
+     * Méthode pour créer la classe Mage
+     * Génère aléatoirement la vie et la puissance du Mage selon les attributs de sa classe
+     *
+     * @param name, le nom du Mage
+     * @return le Mage
+     */
+    private static Hero createMage(String name) {
         System.out.println("You have chosen the path of the Mage !");
         System.out.println();
 
@@ -143,12 +207,19 @@ public class Main {
         int heroPower = (int) (Math.random() * (15 - 8) + 8);
 
         Hero mage = new Mage(name, "image", heroHealth, heroPower);
-        heroes.add(mage);
 
         System.out.println(mage.toString());
+        return mage;
     }
 
-    private static void createWarrior(ArrayList<Hero> heroes, String name) {
+    /**
+     * Méthode pour créer la classe Warrior
+     * Génère aléatoirement la vie et la puissance du Warrior selon les attributs de sa classe
+     *
+     * @param name, le nom du Warrior
+     * @return le Warrior
+     */
+    private static Hero createWarrior(String name) {
         System.out.println("You have chosen the path of the Warrior !");
         System.out.println();
 
@@ -156,11 +227,16 @@ public class Main {
         int heroPower = (int) (Math.random() * (10 - 5) + 5);
 
         Hero warrior = new Warrior(name, "image", heroHealth, heroPower);
-        heroes.add(warrior);
 
         System.out.println(warrior.toString());
+        return warrior;
     }
 
+    /**
+     * Méthode pour afficher la liste des Hero
+     *
+     * @param heroes, liste des Hero
+     */
     private static void listHeroes(ArrayList<Hero> heroes) {
         if (heroes.size() == 0) {
             System.out.println("You have no Heroes! Go make some~");
@@ -171,12 +247,21 @@ public class Main {
 
             for (int i = 0; i < heroes.size(); i++) {
                 Hero hero = heroes.get(i);
-                System.out.println(i + ". " + heroes.get(i));
+                System.out.println(i + ". " + hero);
                 System.out.println();
             }
+            /*for(Hero hero : heroes) {
+                System.out.println(hero);
+            }*/
         }
     }
 
+    /**
+     *Méthode pour éditer un Hero, propose plusieurs option d'édition
+     * @see chooseEditAction()
+     *
+     * @param heroes, liste des Hero
+     */
     private static void editHero(ArrayList<Hero> heroes) {
         int selected;
         boolean edit = true;
@@ -258,23 +343,19 @@ public class Main {
                 selectHero.nextLine();
             }
         }
-        return;
     }
 
-    private static void changeEquipment(ArrayList<Hero> heroes, int selected) {
-        Hero hero = heroes.get(selected);
-        hero.genOffense();
-        hero.genDefense();
-    }
-
-    private static void changeName(ArrayList<Hero> heroes, int selected) {
-        Scanner newNameInput = new Scanner(System.in);
-        System.out.println("Enter your new name : ");
-        String newName = newNameInput.nextLine();
-        heroes.get(selected).setName(newName);
-        System.out.println("Your new name is " + newName);
-    }
-
+    /**
+     * Menu d'édition du Hero
+     * 1. changer le nom du Hero
+     * 2. changer les équipements du Hero
+     * 3. supprimer le Hero
+     * 4. revenir à la séléction des Hero
+     * 5. revenir au menu principal du jeu
+     *
+     * @param editChoice, input de séléction du menu
+     * @return le choix de séléction de l'utilisateur
+     */
     private static int chooseEditAction(Scanner editChoice) {
         int editAnswer;
         System.out.println("What would you like to do ?\n" +
@@ -295,5 +376,37 @@ public class Main {
         editChoice.nextLine();
         return editAnswer;
     }
+
+    /**
+     * Méthode pour changer le nom du Hero avec une nouvelle saisie scanner
+     *
+     * @param heroes, la liste des Hero
+     * @param selected, le Hero séléctionner
+     */
+    private static void changeName(ArrayList<Hero> heroes, int selected) {
+        Scanner newNameInput = new Scanner(System.in);
+        System.out.println("Enter your new name : ");
+        String newName = newNameInput.nextLine();
+        heroes.get(selected).setName(newName);
+        System.out.println("Your new name is " + newName);
+    }
+
+    /**
+     * Méthode pour changer les équipements du Hero avec une nouvelle génération aléatoire
+     * @see genOffense()
+     * @see genDefense()
+     *
+     * @param heroes
+     * @param selected
+     */
+    private static void changeEquipment(ArrayList<Hero> heroes, int selected) {
+        Hero hero = heroes.get(selected);
+        hero.genOffense();
+        hero.genDefense();
+    }
+
+
+
+
 
 }

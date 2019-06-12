@@ -1,34 +1,29 @@
 package dnd.game;
 
 import dnd.event.GameEvent;
+import dnd.event.Item;
+import dnd.event.ItemEvent;
 import dnd.hero.Hero;
 
 import java.util.ArrayList;
 
 public class GameBoard {
 
-    private int cellNumber;
-    private ArrayList<GameEvent> geList;
+    ArrayList<GameCell> gameCellsList;
 
     public GameBoard() {
+        this.gameCellsList = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+            gameCellsList.add(new GameCell(GameEvent.random()));
+        }
+    }
+
+    public GameBoard(ArrayList<GameCell> gameCells) {
 
     }
 
-    public GameBoard(Hero firstPlayer) {
-        this.geList = new ArrayList<>();
-        this.cellNumber = 25;
+    public ArrayList<GameCell> getGameCellsList() {
+        return gameCellsList;
     }
-
-    public GameBoard(Hero firstPlayer, Hero secondPlayer) {
-
-    }
-
-    public GameBoard(Hero firstPlayer, Hero secondPlayer, Hero thirdPlayer) {
-
-    }
-
-    public GameBoard(Hero firstPlayer, Hero secondPlayer, Hero thirdPlayer, Hero fourthPlayer) {
-
-    }
-
 }
